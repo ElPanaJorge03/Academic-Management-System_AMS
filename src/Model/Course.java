@@ -7,16 +7,12 @@ public class Course {
     
     private int id;
     private String name;
-    private Teacher classSupervisor;
     private List<Student> student;
-    private List<Subject> subject;
+    private Curriculum curriculums;
     
-    public Course(int id, String name, Teacher classSupervisor, List<Student> student, List<Subject> subject) {
+    public Course(int id, String name) {
         this.id = id;
         this.name = name;
-        this.classSupervisor = classSupervisor;
-        this.student = student;
-        this.subject = subject;
     }
 
     public int getId() {
@@ -35,13 +31,7 @@ public class Course {
         this.name = name;
     }
 
-    public Teacher getClassSupervisor() {
-        return classSupervisor;
-    }
 
-    public void setClassSupervisor(Teacher classSupervisor) {
-        this.classSupervisor = classSupervisor;
-    }
 
     public List<Student> getStudent() {
         return student;
@@ -50,13 +40,18 @@ public class Course {
     public void setStudent(List<Student> student) {
         this.student = student;
     }
-
-    public List<Subject> getSubject() {
-        return subject;
+    
+    public Curriculum getCurriculums() {
+        return curriculums;
     }
 
-    public void setSubject(List<Subject> subject) {
-        this.subject = subject;
+    public void setCurriculums(Curriculum curriculums) {
+        this.curriculums = curriculums;
+    }
+
+    @Override
+    public String toString() {
+        return "Course [id=" + id + ", name=" + name + ", student=" + student + ", curriculums=" + curriculums + "]";
     }
 
     

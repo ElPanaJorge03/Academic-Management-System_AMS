@@ -35,7 +35,7 @@ public class Home extends Application {
         
         Scene scene = new Scene(root, 300, 250);
         
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("Home");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -45,6 +45,8 @@ public class Home extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+
+
     }
     
 }

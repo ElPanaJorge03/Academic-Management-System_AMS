@@ -10,25 +10,26 @@ import java.util.List;
 //Clase referente a Estudiante
 public class Student extends Person implements ComparableObject{
 
-    private List<Course> course;
+    private List<Activities> activities;
+    private List<Attendance> attendances;
 
 
-    Student(Person data, List<Course> course) {
+    Student(Person data, List<Activities> activities) {
         super(data);
-        this.course = course;
+        this.activities = activities;
     }
 
-    public Student(String names, String surnames, int identification, int id, List<Course> course) {
+    public Student(String names, String surnames, int identification, int id) {
         super(names, surnames, identification, id);
-        this.course = course;
+        
     }
    
-    public List<Course> getCourse() {
-        return course;
+    public List<Activities> getActivities() {
+        return activities;
     }
 
-    public void setCourse(List<Course> course) {
-        this.course = course;
+    public void setActivities(List<Activities> activities) {
+        this.activities = activities;
     }
 
     @Override
@@ -41,8 +42,21 @@ public class Student extends Person implements ComparableObject{
 
     @Override
     public String toString() {
-        return "Student [id=" + id + ", names=" + names + ", surnames=" + surnames + ", identification="
-                + identification + ", course=" + course + "]";
+        return "Student: \n" +
+               "ID: " + id + "\n" +
+               "Names: " + names + "\n" +
+               "Surnames: " + surnames + "\n" +
+               "Identification: " + identification + "\n" +
+               "Activities: " + activities + "\n" +
+               "Attendances: " + attendances + "\n";
+    }
+
+    public List<Attendance> getAttendances() {
+        return attendances;
+    }
+
+    public void setAttendances(List<Attendance> attendances) {
+        this.attendances = attendances;
     } 
 
     

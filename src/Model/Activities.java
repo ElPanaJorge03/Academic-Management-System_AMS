@@ -1,6 +1,7 @@
 package Model;
 
-import java.sql.Date;
+
+import java.time.LocalDate;
 
 //Clase referente a Actividades
 public class Activities {
@@ -8,15 +9,14 @@ public class Activities {
     private int id;
     private String name;
     private double grade;
-    private Date submissionDate;
-    private Subject subject;
+    private LocalDate submissionDate;
 
-    public Activities(int id, String name, double grade, Date submissionDate, Subject subject) {
+    public Activities(int id, String name, double grade, LocalDate submissionDate) {
         this.id = id;
         this.name = name;
         this.grade = grade;
         this.submissionDate = submissionDate;
-        this.subject = subject;
+
     }
 
     public int getId() {
@@ -43,20 +43,24 @@ public class Activities {
         this.grade = grade;
     }
 
-    public Date getSubmissionDate() {
+    public LocalDate getSubmissionDate() {
         return submissionDate;
     }
 
-    public void setSubmissionDate(Date submissionDate) {
+    public void setSubmissionDate(LocalDate submissionDate) {
         this.submissionDate = submissionDate;
     }
 
-    public Subject getSubject() {
-        return subject;
+
+    @Override
+    public String toString() {
+        return "Activities: \n" +
+               "ID: " + id + "\n" +
+               "Name: " + name + "\n" +
+               "Grade: " + grade + "\n" +
+               "Submission Date: " + submissionDate + "\n";
     }
 
-    public void setSubject(Subject subject) {
-        this.subject = subject;
-    }
+    
 
 }

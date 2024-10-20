@@ -7,14 +7,12 @@ public class Teacher extends Person implements ComparableObject{
     
     private List<Subject> subjects;
 
-    public Teacher(Teacher data, List<Subject> subjects) {
+    public Teacher(Teacher data) {
         super(data);
-        this.subjects = subjects;
     }
     
-    public Teacher(String names, String surnames, int identification, int id, List<Subject> subjects) {
+    public Teacher(String names, String surnames, int identification, int id) {
         super(names, surnames, identification, id);
-        this.subjects = subjects;
     }
 
     public List<Subject> getSubjects() {
@@ -31,6 +29,16 @@ public class Teacher extends Person implements ComparableObject{
             return Integer.compare(this.id, ((Teacher) other).id);
         }
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher: \n" +
+               "ID: " + id + "\n" +
+               "Names: " + names + "\n" +
+               "Surnames: " + surnames + "\n" +
+               "Subjects: " + subjects + "\n" +
+               "Identification: " + identification + "\n";
     }
 
     

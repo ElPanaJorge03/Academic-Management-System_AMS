@@ -10,10 +10,9 @@ public class GradingPeriod {
     private List<Activities> activities;
     private double finalGrade;
 
-    public GradingPeriod(int id, int number, List<Activities> activities, double finalGrade) {
+    public GradingPeriod(int id, int number, double finalGrade) {
         this.id = id;
         this.number = number;
-        this.activities = activities;
         this.finalGrade = finalGrade;
     }
 
@@ -47,6 +46,15 @@ public class GradingPeriod {
 
     public void setFinalGrade(double finalGrade) {
         this.finalGrade = finalGrade;
+    }
+
+    @Override
+    public String toString() {
+        return "GradingPeriod: \n" +
+               "ID: " + id + "\n" +
+               "Number: " + number + "\n" +
+               "Activities: " + activities + "\n" +
+               "Final Grade: " + finalGrade + "\n";
     }
 
     
